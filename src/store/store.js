@@ -24,6 +24,13 @@ const store = new Vuex.Store({
       },
     ],
   },
+  mutations: {
+    reducePrice: (state) => {
+      state.products.forEach((product) => {
+        product.price -= 1;
+      });
+    },
+  },
   getters: {
     saleProducts: (state) => {
       return state.products.map((product) => {
