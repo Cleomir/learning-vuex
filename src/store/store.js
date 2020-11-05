@@ -31,6 +31,11 @@ const store = new Vuex.Store({
       });
     },
   },
+  actions: {
+    reducePrice: (context) => {
+      setTimeout(() => context.commit("reducePrice"), 2000);
+    },
+  },
   getters: {
     saleProducts: (state) => {
       return state.products.map((product) => {
